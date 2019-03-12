@@ -8,26 +8,15 @@ Congratulations for making it this far in the interview process for the Pandora 
 
 You will have five business days to complete it, though it will likely only require ~24 hours worth of design, implementation and documentation to complete a submission (assuming a moderate level of Android and Java development experience).
 
-## Description 🚀
-Description coming soon!
-
-## Important Details 🔎
+## Description and Details 🔎
 
 #### Researching and Plagiarism
 
 You are actively encouraged to research the web, books, videos, or tutorials for this project. That said, we expect all code that is submitted to be your own (e.g. this project should **NOT** be completed with another person). That means that we expect each candidate to refrain from copying and/or pasting code into the project. If we find copied code in your project, you will not be invited to continue interviewing. 
 
-#### Submission Format
+#### Android App Requirements
 
-This repository will be your starting point. Please fork this Github repository ([onramp-android-take-home](https://github.com/onramp-io/onramp-android-take-home)) and commit to your master branch for the project. Once the Android application has been completed, you'll be submitting this forked repository. Prior to submitting your project, you should update the README file to provide the following information:
-
-*    A high level architectural overview of your Android application. e.g. names, relationships and purposes of all components, including Activities, Services, Content Providers, Broadcast Receivers, etc. 
-*   A brief description of any design patterns that you leveraged.
-*   Screenshots of each Activity View and descriptions of the overall user flow.
-
-#### Submission Deadline + Process
-
-You must submit your project by March 22nd, 2019 at 11:59pm PST. Your project will be considered complete when you email [submissions@onramp.io](mailto:engineering@onramp.io) with a link to your repository. 
+More details coming soon! 
 
 ## What we're looking for 🌟
 
@@ -63,7 +52,21 @@ As detailed above, each project submission should included a README file, which 
 
 *Note: Testing frameworks and strategies are intentionally NOT included within the rubric. Though UI and Android component testing are critical paractes of Android Development, this take home project prioritizes a focus on surfacing Java/Android development proficiency.
 
-## Resources 📚
+## Submission Information 🚀
+
+#### Submission Format
+
+This repository will be your starting point. Please fork this Github repository ([onramp-android-take-home](https://github.com/onramp-io/onramp-android-take-home)) and commit to your master branch for the project. Once the Android application has been completed, you'll be submitting this forked repository. Prior to submitting your project, you should update the README file to provide the following information:
+
+*    A high level architectural overview of your Android application. e.g. names, relationships and purposes of all components, including Activities, Services, Content Providers, Broadcast Receivers, etc. 
+*   A brief description of any design patterns that you leveraged.
+*   [Screenshots](https://developer.android.com/studio/debug/am-screenshot) of each Activity View and descriptions of the overall user flow.
+
+#### Submission Deadline + Process
+
+You must submit your project by March 22nd, 2019 at 11:59pm PST. Your project will be considered complete when you email [submissions@onramp.io](mailto:engineering@onramp.io) with a link to your repository. 
+
+## Additional Resources 📚
 
 *   [Android Studio](https://developer.android.com/studio)
 *   [Android Application Fundamentals](https://developer.android.com/guide/components/fundamentals)
