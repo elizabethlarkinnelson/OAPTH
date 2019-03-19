@@ -24,7 +24,7 @@ The Onramp team wants you to build an Android application which is related to so
 *   The usage of a minimum of at least five UI components from the [Android Material Design Component Library](https://material.io/design/components/bottom-navigation.html).
 *   The usage of a minimum one [Fragment](https://developer.android.com/guide/components/fragments).
 
-**Note you will need to detail where and how your Android App meets these requirements in your repository's  README file when you submit your project.  **
+**Note you will need to detail where and how your Android App meets these requirements in your repository's  README file when you submit your project.**
 
 ## What we're looking for 🌟
 
