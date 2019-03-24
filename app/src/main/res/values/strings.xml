@@ -1,4 +1,8 @@
 <resources>
-    <string name="app_name">Onramp Android Take Home</string>
+
+    <!-- Toolbar and Title Strings -->
+    <string name="app_name">Journey</string>
     <string name="action_settings">Settings</string>
+    <string name="motto">People matter most</string>
+
 </resources>
