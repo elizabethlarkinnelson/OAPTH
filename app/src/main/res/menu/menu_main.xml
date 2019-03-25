@@ -18,5 +18,4 @@
         android:title="@string/action_order"
         app:showAsAction="ifRoom" />
 
-
 </menu>

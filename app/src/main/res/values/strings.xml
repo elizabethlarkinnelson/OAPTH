@@ -7,4 +7,12 @@
     <string name="action_order">Order</string>
     <string name="motto">People matter most</string>
 
+    <!-- Email Intent Strings -->
+    <string name="intent_email">mailto:coffee@journey.com</string>
+    <string name="email_subject">Ask me anything!</string>
+    <string name="email_tagline">Let us know how we can help.</string>
+
+    <!-- Phone Call Intent Strings -->
+    <string name="intent_phone_call">tel:7075802641</string>
+
 </resources>
