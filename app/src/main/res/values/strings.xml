@@ -3,6 +3,7 @@
     <!-- Toolbar and Title Strings -->
     <string name="app_name">Journey</string>
     <string name="action_settings">Settings</string>
+    <string name="action_email">Email</string>
     <string name="motto">People matter most</string>
 
 </resources>

@@ -7,4 +7,9 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_email"
+        android:icon="@android:drawable/ic_dialog_email"
+        android:title="@string/action_email"
+        app:showAsAction="ifRoom" />
 </menu>
