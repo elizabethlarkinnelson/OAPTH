@@ -48,6 +48,13 @@ public class MainActivity extends AppCompatActivity {
         switch(item.getItemId()) {
             case R.id.action_email:
                 sendEmail();
+                break;
+
+            case R.id.action_order:
+                Intent orderIntent = new Intent(MainActivity.this, OrderActivity.class);
+                startActivity(orderIntent);
+
+
         }
 
         return super.onOptionsItemSelected(item);
