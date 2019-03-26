@@ -14,6 +14,6 @@ public class OrderActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.order);
-
+        getSupportFragmentManager().beginTransaction().replace(R.id.order_container, new OrderFragment()).commit();
     }
 }
