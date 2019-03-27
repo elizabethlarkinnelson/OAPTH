@@ -5,7 +5,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -48,12 +50,23 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.ItemVi
         }
     }
 
-    class ItemViewHolder extends RecyclerView.ViewHolder {
+    class ItemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener  {
         private final TextView itemItemView;
 
         private ItemViewHolder(View itemView){
             super(itemView);
+            itemView.setOnClickListener(this);
             itemItemView = itemView.findViewById(R.id.coffeeItem);
+
         }
+
+        @Override
+        public void onClick(View view){
+            int pos = getLayoutPosition();
+
+            Toast.makeText(view.getContext(), "I DID IT" + Integer.toString(pos),
+                    Toast.LENGTH_LONG).show();
+        }
+
     }
 }
