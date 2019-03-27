@@ -63,9 +63,12 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.ItemVi
         @Override
         public void onClick(View view){
             int pos = getLayoutPosition();
+            long itemId = getItemId();
 
-            Toast.makeText(view.getContext(), "I DID IT" + Integer.toString(pos),
+            Toast.makeText(view.getContext(), "I DID IT" + Integer.toString(pos)+ Long.toString(itemId),
                     Toast.LENGTH_LONG).show();
+
+
         }
 
     }

@@ -10,11 +10,11 @@ import android.support.v7.widget.RecyclerView;
 
 import java.util.List;
 
-public class SendOrderActivity extends AppCompatActivity {
+public class AboutActivity extends AppCompatActivity {
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.order);
+            setContentView(R.layout.about);
         }
 }

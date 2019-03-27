@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
@@ -53,7 +52,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_order:
                 Intent orderIntent = new Intent(MainActivity.this, OrderActivity.class);
                 startActivity(orderIntent);
+                break;
 
+            case R.id.action_about:
+                Intent aboutIntent = new Intent(MainActivity.this, AboutActivity.class);
+                startActivity(aboutIntent);
+                break;
 
         }
 
