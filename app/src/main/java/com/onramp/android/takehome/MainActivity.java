@@ -1,5 +1,6 @@
 package com.onramp.android.takehome;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -25,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(getString(R.string.motto));
 
+        /**
+         * FAB which sends user to phone
+         */
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,14 +40,26 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     *Create menu options consisting of ability to:
+     * Order, email and choose from settings which has one option - About
+     */
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
+    /**
+     *Logic handling option items
+     * User is either sent to email, OrderActivity or AboutActivity
+     */
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this);
+
         switch(item.getItemId()) {
             case R.id.action_email:
                 sendEmail();
@@ -51,18 +67,22 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.action_order:
                 Intent orderIntent = new Intent(MainActivity.this, OrderActivity.class);
-                startActivity(orderIntent);
+                startActivity(orderIntent, options.toBundle());
                 break;
 
             case R.id.action_about:
                 Intent aboutIntent = new Intent(MainActivity.this, AboutActivity.class);
-                startActivity(aboutIntent);
+                startActivity(aboutIntent, options.toBundle());
                 break;
 
         }
 
         return super.onOptionsItemSelected(item);
     }
+
+    /*
+     * Email intent logic
+     */
 
     public void sendEmail(){
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
