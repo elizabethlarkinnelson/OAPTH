@@ -40,7 +40,12 @@
         <TextView
             android:id="@+id/intentionality"
             style="@style/AboutTheme"
-            android:text="@string/determination" />
+            android:text="@string/intentionality" />
+
+        <TextView
+            android:id="@id/determination"
+            style="@style/AboutTheme"
+            android:text="@string/determination"/>
 
         <TextView
             android:id="@+id/determination"

@@ -25,6 +25,7 @@
 
     <!-- Font -->
     <string name="default_font" translatable="false">sans-serif-dark</string>
+    <string name="intentionality">intentionality</string>
 
 
 </resources>
