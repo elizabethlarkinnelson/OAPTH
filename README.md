@@ -24,5 +24,5 @@
     * Touch Feedback
     * Transitions
     * Menu
-    * Utilized Material Design color tool to create UX friendly color scheme 
+    * Color scheme created by Material Design Color Tool Palette
 5. 1 Fragment -Utilized in AboutActivity 
