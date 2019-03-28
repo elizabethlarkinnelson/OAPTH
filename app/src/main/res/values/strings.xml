@@ -23,5 +23,8 @@
     <string name="environment">environment</string>
     <string name="mission_statement">Listen to our mission statement here</string>
 
+    <!-- Font -->
+    <string name="default_font" translatable="false">sans-serif-dark</string>
+
 
 </resources>

@@ -17,6 +17,7 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.ItemVi
     private List<Item> mItems;
 
     ItemListAdapter(Context context){
+
         mInflater = LayoutInflater.from(context);
     }
 
@@ -57,15 +58,13 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.ItemVi
             super(itemView);
             itemView.setOnClickListener(this);
             itemItemView = itemView.findViewById(R.id.coffeeItem);
-
         }
 
         @Override
         public void onClick(View view){
             int pos = getLayoutPosition();
-            long itemId = getItemId();
 
-            Toast.makeText(view.getContext(), "I DID IT" + Integer.toString(pos)+ Long.toString(itemId),
+            Toast.makeText(view.getContext(), "Your item is on it's way!",
                     Toast.LENGTH_LONG).show();
 
 

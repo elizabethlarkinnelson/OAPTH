@@ -5,7 +5,11 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
-
+/*
+ * @ = Annotations
+ * This item class uses entity to create db
+ * This db has one column called "item" in the "item_table"
+ */
 @Entity(tableName = "item_table")
 public class Item {
 
@@ -14,6 +18,13 @@ public class Item {
     @ColumnInfo(name = "item")
     private String mItem;
 
-    public Item(@NonNull String item) {this.mItem = item;}
-    public String getItem(){return this.mItem;}
+    /*
+     * Constructor.  Non null means parameter can never be null
+     */
+    public Item(@NonNull String item) {
+        this.mItem = item;
+    }
+    public String getItem(){
+        return this.mItem;
+    }
 }

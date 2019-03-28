@@ -8,18 +8,25 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 
+/*
+ * Using database annotation to create a database with one table, item
+ */
 @Database(entities = {Item.class}, version = 1, exportSchema = false)
 public abstract class ItemRoomDatabase extends RoomDatabase {
 
+    /*
+     *Dao that works with database as getter
+     */
     public abstract ItemDao itemDao();
     private static ItemRoomDatabase INSTANCE;
 
     static ItemRoomDatabase getDatabase(final Context context){
-        //Next three lines prevent multiple datbases being opened
+        /*
+         * Preventing multiple database instances from opening
+         */
         if (INSTANCE == null){
             synchronized (ItemRoomDatabase.class){
                 if (INSTANCE == null){
-                    //Builds db
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                             ItemRoomDatabase.class,
                             "item_database")
@@ -43,7 +50,8 @@ public abstract class ItemRoomDatabase extends RoomDatabase {
     private static class PopulateDbAsync extends AsyncTask<Void, Void, Void>{
 
         private final ItemDao mDao;
-        String[] items = {"mocha", "latte", "iced team"};
+        String[] items = {"Mocha", "Latte", "Vanilla Latte", "Soy Latte", "Hot Chocolate",
+                        "Iced Tea", "Hot Tea", "London Fog", "Hot Chai", "Iced Chai"};
 
         PopulateDbAsync(ItemRoomDatabase db){
             mDao = db.itemDao();

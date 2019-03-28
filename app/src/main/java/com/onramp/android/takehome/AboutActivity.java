@@ -27,7 +27,7 @@ public class AboutActivity extends AppCompatActivity {
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.about);
+            setContentView(R.layout.activity_about);
             getSupportFragmentManager().beginTransaction().replace(R.id.order_container, new AboutFragment()).commit();
 
             final ImageButton imageButton = (ImageButton) findViewById(R.id.button);
