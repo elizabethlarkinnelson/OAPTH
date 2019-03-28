@@ -7,22 +7,68 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".AboutActivity">
 
-    <TextView
-        android:id="@+id/order_item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="this is a big ol test"
-        app:layout_constraintEnd_toStartOf="parent"
+    <LinearLayout
+        android:id="@+id/order_container"
+        android:layout_width="match_parent"
+        android:layout_height="276dp"
+        android:layout_marginTop="86dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
+        <TextView
+            android:id="@+id/our_values"
+            style="@style/AboutTheme"
+            android:layout_marginBottom="@dimen/values_margin"
+            android:text="@string/our_values"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/people_product"
+            style="@style/AboutTheme"
+            android:text="@string/people_product" />
+
+        <TextView
+            android:id="@+id/respect"
+            style="@style/AboutTheme"
+            android:text="@string/respect" />
+
+        <TextView
+            android:id="@+id/intentionality"
+            style="@style/AboutTheme"
+            android:text="@string/determination" />
+
+        <TextView
+            android:id="@+id/determination"
+            style="@style/AboutTheme"
+            android:text="@string/environment" />
+
+        <TextView
+            android:id="@+id/mission_statement"
+            style="@style/AboutTheme"
+            android:layout_marginTop="@dimen/mission_statement_margin"
+            android:layout_marginBottom="0dp"
+            android:text="@string/mission_statement"
+            android:textAllCaps="false" />
+
+
+    </LinearLayout>
+
+    <ImageButton
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play me"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorAccent"
+        android:src="@android:drawable/ic_media_play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/order_item" />
+        app:layout_constraintTop_toBottomOf="@id/order_container" />
 
 
 </android.support.constraint.ConstraintLayout>

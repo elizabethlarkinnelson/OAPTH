@@ -1,8 +1,8 @@
 <resources>
 
     <!-- Toolbar and Title Strings -->
-    <string name="app_name">Journey</string>
-    <string name="action_settings">More About Us</string>
+    <string name="app_name">JourneyCoffee</string>
+    <string name="action_settings">More About Journey</string>
     <string name="action_email">Email</string>
     <string name="action_order">Order</string>
     <string name="motto">People matter most</string>
@@ -15,7 +15,13 @@
     <!-- Phone Call Intent Strings -->
     <string name="intent_phone_call">tel:7075802641</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- About Fragment Strings -->
+    <string name="our_values">Our values - P.R.I.D.E.</string>
+    <string name="people_product">people//product</string>
+    <string name="respect">respect</string>
+    <string name="determination">determination</string>
+    <string name="environment">environment</string>
+    <string name="mission_statement">Listen to our mission statement here</string>
+
 
 </resources>

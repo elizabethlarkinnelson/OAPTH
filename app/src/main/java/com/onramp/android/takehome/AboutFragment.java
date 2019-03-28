@@ -11,18 +11,17 @@ import android.widget.TextView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class OrderFragment extends Fragment {
+public class AboutFragment extends Fragment {
 
 
-    public OrderFragment() {
+    public AboutFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootview = inflater.inflate(R.layout.item_list, container,false);
+        View rootview = inflater.inflate(R.layout.about, container,false);
         return rootview;
     }
 

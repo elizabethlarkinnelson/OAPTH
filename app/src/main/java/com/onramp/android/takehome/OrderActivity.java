@@ -38,6 +38,5 @@ public class OrderActivity extends AppCompatActivity{
             }
         });
 
-//        getSupportFragmentManager().beginTransaction().replace(R.id.order_container, new OrderFragment()).commit();
     }
 }

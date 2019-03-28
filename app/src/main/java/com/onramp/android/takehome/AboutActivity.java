@@ -1,24 +1,21 @@
 package com.onramp.android.takehome;
 
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Button;
-
-import java.util.List;
+import android.widget.ImageButton;
 
 public class AboutActivity extends AppCompatActivity {
 
         private MediaPlayer mMediaPlayer;
 
 
+        /*
+         * OnCompletion callback that calls .release() on MediaPlayer object
+         * when the MediaPlayer is finished
+         */
         private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mediaPlayer) {
@@ -30,9 +27,10 @@ public class AboutActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.about);
+            getSupportFragmentManager().beginTransaction().replace(R.id.order_container, new AboutFragment()).commit();
 
-            final Button button = (Button) findViewById(R.id.button);
-            button.setOnClickListener(new View.OnClickListener(){
+            final ImageButton imageButton = (ImageButton) findViewById(R.id.button);
+            imageButton.setOnClickListener(new View.OnClickListener(){
                 public void onClick(View v){
                     mMediaPlayer = MediaPlayer.create(AboutActivity.this, R.raw.about);
                     mMediaPlayer.start();
@@ -41,12 +39,19 @@ public class AboutActivity extends AppCompatActivity {
             });
         }
 
+    /**
+     * Stop media playback when user leaves activity
+     */
+
     @Override
     protected void onStop() {
         super.onStop();
         releaseMediaPlayer();
     }
 
+    /**
+     * Method used to free up mediaplayer resources used in onStop() and onCompletionListner()
+     */
     private void releaseMediaPlayer(){
         if (mMediaPlayer != null){
             mMediaPlayer.release();
@@ -54,6 +59,9 @@ public class AboutActivity extends AppCompatActivity {
         }
     }
 
+    /*
+     *Callback for change in audio focus
+     */
     private AudioManager.OnAudioFocusChangeListener mOnAudioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener(){
         @Override
         public void onAudioFocusChange(int focusChange){
