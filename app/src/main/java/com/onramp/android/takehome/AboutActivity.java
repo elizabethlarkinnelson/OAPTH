@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 
+
 public class AboutActivity extends AppCompatActivity {
 
         private MediaPlayer mMediaPlayer;
@@ -32,9 +33,17 @@ public class AboutActivity extends AppCompatActivity {
             final ImageButton imageButton = (ImageButton) findViewById(R.id.button);
             imageButton.setOnClickListener(new View.OnClickListener(){
                 public void onClick(View v){
-                    mMediaPlayer = MediaPlayer.create(AboutActivity.this, R.raw.about);
-                    mMediaPlayer.start();
-                    mMediaPlayer.setOnCompletionListener(mCompletionListener);
+                    if (mMediaPlayer != null){
+                        if (mMediaPlayer.isPlaying()){
+                            mMediaPlayer.pause();
+                        } else {
+                            mMediaPlayer.start();
+                        }
+                    } else {
+                        mMediaPlayer = MediaPlayer.create(AboutActivity.this, R.raw.about);
+                        mMediaPlayer.start();
+                        mMediaPlayer.setOnCompletionListener(mCompletionListener);
+                    }
                 }
             });
         }
@@ -58,6 +67,7 @@ public class AboutActivity extends AppCompatActivity {
             mMediaPlayer = null;
         }
     }
+
 
     /*
      *Callback for change in audio focus
